@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  website:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    ports:
+      - 9000:9000
+    volumes:
+      - /home/user/Desktop/musicplayer/build
+    restart: always

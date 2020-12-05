@@ -1,11 +1,11 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/blog
+    url: jdbc:postgresql://192.168.1.33:5432/blog
     username: postgres
     password: postgres
 
   liquibase:
-    enabled: true
+    enabled: false
     change-log: classpath:/db/changelog/db.changelog.master.xml
 server:
-  port: 8080
+  port: 9000
