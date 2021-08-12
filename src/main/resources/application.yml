@@ -1,11 +1,18 @@
 spring:
   datasource:
-    url: jdbc:postgresql://192.168.1.33:5432/blog
+    url: jdbc:postgresql://172.18.0.1:5432/blog
     username: postgres
     password: postgres
 
   liquibase:
     enabled: false
     change-log: classpath:/db/changelog/db.changelog.master.xml
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQL92Dialect
 server:
-  port: 9000
+  port: 9002
